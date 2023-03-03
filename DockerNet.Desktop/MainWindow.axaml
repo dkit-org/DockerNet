@@ -1,0 +1,79 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:DockerNet.Desktop"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:reactiveUi="http://reactiveui.net"
+        xmlns:controls="clr-namespace:DockerNet.Desktop.Controls"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="400"
+        Width="800" Height="400"
+        x:Class="DockerNet.Desktop.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="DockerNet.Desktop">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+
+    <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,*,Auto">
+
+        <controls:AppMenuBar
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.ColumnSpan="2" />
+
+        <!-- TODO(REFACTOR): use tree view instead -->
+        <Grid
+            Grid.Column="0" Grid.Row="1"
+            RowDefinitions="Auto,*,Auto"
+            ColumnDefinitions="Auto"
+            Background="lightgray">
+
+            <Grid.Styles>
+                <Style Selector="Button">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="Padding" Value="8" />
+                    <Setter Property="BorderThickness" Value="2, 0, 0,0" />
+                    <Setter Property="BorderBrush" Value="lightgray" />
+                </Style>
+                <Style Selector="Button:pointerover /template/ ContentPresenter">
+                    <Setter Property="BorderBrush" Value="Salmon"/>
+                </Style>
+            </Grid.Styles>
+
+            <StackPanel Grid.Column="0" Grid.Row="0">
+                <Button
+                    Command="{Binding Navigate}" CommandParameter="dashboard">
+                    <PathIcon Data="{StaticResource HomeRegular}"></PathIcon>
+                </Button>
+                <Button Command="{Binding Navigate}" CommandParameter="docker">
+                    <PathIcon Data="{StaticResource Docker}"></PathIcon>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Column="0" Grid.Row="2">
+                <Button Command="{Binding Navigate}" CommandParameter="settings">
+                    <PathIcon Data="{StaticResource SettingsRegular}"></PathIcon>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+
+        <reactiveUi:RoutedViewHost Grid.Column="1" Grid.Row="1" Router="{Binding Router}">
+            <reactiveUi:RoutedViewHost.DefaultContent>
+                <TextBlock Text="Default content"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" />
+            </reactiveUi:RoutedViewHost.DefaultContent>
+            <reactiveUi:RoutedViewHost.ViewLocator>
+                <vm:AppViewLocator />
+            </reactiveUi:RoutedViewHost.ViewLocator>
+        </reactiveUi:RoutedViewHost>
+
+        <controls:AppStatusBar
+            Grid.Column="0"
+            Grid.Row="2"
+            Grid.ColumnSpan="2" />
+
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:settings="clr-namespace:DockerNet.Desktop.Pages.Settings"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="DockerNet.Desktop.Pages.Settings.ServersView">
+
+    <Design.DataContext>
+        <settings:ServersViewModel />
+    </Design.DataContext>
+
+    <StackPanel>
+        <Label Content="Data Grid" />
+        <DataGrid Items="{Binding Servers}"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Header="Activated" Binding="{Binding Active}" />
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Host" Binding="{Binding Host}"  IsReadOnly="True"/>
+                <DataGridTextColumn Header="Port" Binding="{Binding Port}" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>
+</UserControl>

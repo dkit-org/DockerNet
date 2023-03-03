@@ -1,0 +1,11 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="DockerNet.Desktop.App">
+    
+    <Application.Styles>
+        <StyleInclude Source="avares://DockerNet.Desktop/Icons.axaml"></StyleInclude>
+        <FluentTheme/>
+        <StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
+    </Application.Styles>
+    
+</Application>

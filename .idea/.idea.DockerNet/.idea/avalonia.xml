@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="DockerNet.Desktop/App.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Controls/AppMenuBar.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Controls/AppSideBar.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Controls/AppStatusBar.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Controls/MenuBar.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Controls/SearchEveryWhere.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Controls/SideBar.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Controls/Sidebar.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Icons.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/MainWindow.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Pages/Dashboard/DashboardPage.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Pages/DashboardPage/DashboardPage.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Pages/Docker/ContainersView.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Pages/Docker/DockerPage.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Pages/Docker/ImagesView.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Pages/Settings/Appearance.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Pages/Settings/AppearanceView.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Pages/Settings/ServersView.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Pages/Settings/SettingsPage.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+        <entry key="DockerNet.Desktop/Views/MainWindow.axaml" value="DockerNet.Desktop/DockerNet.Desktop.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

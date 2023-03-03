@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:docker="clr-namespace:DockerNet.Desktop.Pages.Docker"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="DockerNet.Desktop.Pages.Docker.ImagesView">
+
+
+    <Design.DataContext>
+        <docker:ImagesViewModel />
+    </Design.DataContext>
+    
+    <Control.Styles>
+        <Style Selector="DataGrid > DataGridCell">
+            
+        </Style>
+    </Control.Styles>
+
+    <Grid ColumnDefinitions="*,Auto"
+          RowDefinitions="Auto,*">
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <Button>
+                <PathIcon Data="{StaticResource AddSquareRegular}" />
+            </Button>
+        </StackPanel>
+        <DataGrid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
+                  Items="{Binding Images}"
+                  CanUserResizeColumns="True"
+                  CanUserReorderColumns="True"
+                  IsReadOnly="True"
+                  AutoGenerateColumns="True">
+        </DataGrid>
+    </Grid>
+
+</UserControl>
